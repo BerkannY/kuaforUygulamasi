@@ -1,0 +1,415 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background"
+    tools:context=".RandevuActivity">
+
+
+    <LinearLayout
+        android:id="@+id/layoutbaslik"
+        android:padding="12dp"
+        android:textAlignment="center"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#673AB7"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/textView10"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Randevu Al"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textSize="25sp"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+
+
+    <LinearLayout
+        android:id="@+id/ilklayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="10dp"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/layoutbaslik">
+
+
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/textView8"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="20dp"
+                android:text="Şehriniz:"
+                android:textAlignment="center"
+                android:textColor="#B88F45"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+            <TextView
+                android:id="@+id/bilgi"
+                android:textColor="@color/white"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:text=" (Bu bilgi kayıt esnasında alındı.)"
+                android:textAlignment="center"
+                android:textSize="14dp" />
+
+            <TextView
+                android:id="@+id/sehirtxt"
+                android:textColor="@color/white"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:textAlignment="center"
+                android:text="ANKARA"
+                android:textStyle="bold"
+                android:textSize="16dp" />
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/textView7"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="20dp"
+                android:text="Kuaför Seçin:"
+                android:textAlignment="center"
+                android:textColor="#B88F45"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <Spinner
+                android:id="@+id/spinnerkuafor"
+                android:background="@color/white"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+
+        </LinearLayout>
+
+        <CalendarView
+            android:id="@+id/calendarView"
+            android:background="@color/white"
+            android:layout_marginTop="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <Button
+            android:layout_marginTop="10dp"
+            android:id="@+id/devambtn"
+            android:backgroundTint="#B88F45"
+            android:layout_marginHorizontal="40dp"
+            android:onClick="devamfonk"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Devam Et" />
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ikincilayout"
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+
+        app:layout_constraintTop_toBottomOf="@+id/layoutbaslik">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="25dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/textView6"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="20dp"
+                android:text="Saat Seçin:"
+                android:textAlignment="center"
+                android:textColor="#B88F45"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:id="@+id/timelayoutmain"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:layout_marginHorizontal="90dp"
+                android:layout_marginBottom="30dp"
+                android:baselineAligned="true"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:id="@+id/time1layout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="80dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/saat9"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:onClick="saat9fonk"
+                        android:text="09:00"
+                        android:textSize="25sp" />
+
+                    <TextView
+                        android:id="@+id/saat11"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:onClick="saat11fonk"
+                        android:text="11:00"
+                        android:textSize="25sp" />
+
+                    <TextView
+                        android:id="@+id/saat15"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:onClick="saat15fonk"
+                        android:text="15:00"
+                        android:textSize="25sp" />
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/time2layout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/saat10"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:onClick="saat10fonk"
+                        android:text="10:00"
+                        android:textSize="25sp" />
+
+                    <TextView
+                        android:id="@+id/saat14"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:onClick="saat14fonk"
+                        android:text="14:00"
+                        android:textSize="25sp" />
+
+                    <TextView
+                        android:id="@+id/saat16"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:onClick="saat16fonk"
+                        android:text="16:00"
+                        android:textSize="25sp" />
+
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/islemanalayout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="30dp"
+                android:layout_marginBottom="50dp"
+                android:orientation="vertical">
+
+
+                <TextView
+                    android:id="@+id/metin"
+                    android:text="İşlemler"
+                    android:textColor="#B88F45"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:layout_marginBottom="10dp"
+                    android:textAlignment="center"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                </TextView>
+
+                <LinearLayout
+                    android:id="@+id/islem1layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <CheckBox
+                        android:id="@+id/checkBoxSacKesim"
+                        android:textStyle="bold"
+                        android:textColor="@color/white"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Saç Kesim"
+                        android:onClick="checkboxfonk"/>
+
+                    <CheckBox
+                        android:id="@+id/checkBoxFon"
+                        android:textStyle="bold"
+                        android:textColor="@color/white"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Fon"
+                        android:onClick="checkboxfonk"/>
+
+                    <CheckBox
+                        android:id="@+id/checkBoxBoyama"
+                        android:textStyle="bold"
+                        android:textColor="@color/white"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Saç Boyama"
+                        android:onClick="checkboxfonk"/>
+                </LinearLayout>
+                <LinearLayout
+                    android:id="@+id/islem2layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <CheckBox
+                        android:id="@+id/checkBoxPerma"
+                        android:textStyle="bold"
+                        android:textColor="@color/white"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Perma"
+                        android:onClick="checkboxfonk"/>
+
+                    <CheckBox
+                        android:id="@+id/checkBoxRofle"
+                        android:textStyle="bold"
+                        android:textColor="@color/white"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Röfle"
+                        android:onClick="checkboxfonk"/>
+
+                    <CheckBox
+                        android:id="@+id/checkBoxManikur"
+                        android:textStyle="bold"
+                        android:textColor="@color/white"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Manikür"
+                        android:onClick="checkboxfonk"/>
+                </LinearLayout>
+                <LinearLayout
+                    android:id="@+id/islem3layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <CheckBox
+                        android:id="@+id/checkBoxPedikur"
+                        android:textStyle="bold"
+                        android:textColor="@color/white"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Pedikür"
+                        android:onClick="checkboxfonk"/>
+
+                    <CheckBox
+                        android:id="@+id/checkBoxAgda"
+                        android:textStyle="bold"
+                        android:textColor="@color/white"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Ağda"
+                        android:onClick="checkboxfonk"/>
+
+                    <CheckBox
+                        android:id="@+id/checkBoxYuz"
+                        android:textStyle="bold"
+                        android:textColor="@color/white"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Yüz Alma"
+                        android:onClick="checkboxfonk"/>
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+
+            <Button
+                android:layout_marginHorizontal="40dp"
+                android:backgroundTint="#B88F45"
+                android:id="@+id/radevualbtn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:onClick="randevualfonk"
+                android:text="Randevu Al"
+                android:textSize="22sp">
+
+            </Button>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/greibtn"
+        android:layout_width="50dp"
+        android:layout_height="40dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="75dp"
+        android:onClick="geridonfonk"
+        android:src="@drawable/geri"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+    </ImageView>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

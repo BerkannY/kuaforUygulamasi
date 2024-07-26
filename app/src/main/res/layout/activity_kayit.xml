@@ -1,0 +1,336 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:background="@drawable/background"
+    android:layout_height="match_parent"
+    tools:context=".KayitActivity">
+
+    <ImageView
+        android:id="@+id/logoKayit"
+        android:layout_width="261dp"
+        android:layout_height="206dp"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="50dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ico" />
+
+    <LinearLayout
+        android:id="@+id/isimanalayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="15dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/logoKayit">
+
+        <TextView
+            android:id="@+id/isimtxt"
+            android:layout_width="110dp"
+            android:layout_height="wrap_content"
+            android:text="İsiminiz:"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            android:textSize="18sp" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/isimlayout"
+            app:boxBackgroundColor="#B88F45"
+            app:counterTextColor="@color/white"
+            app:boxStrokeColor="@color/white"
+            app:placeholderTextColor="@color/white"
+            android:textColorHint="@color/white"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:counterMaxLength="20"
+            app:boxCornerRadiusBottomStart="15dp"
+            app:boxCornerRadiusTopEnd="15dp"
+            app:counterEnabled="true">
+
+
+            <EditText
+                android:id="@+id/isimedit"
+
+                android:textColor="@color/white"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:hint="İsminizi Giriniz"
+                android:inputType="text"
+                android:maxLength="20" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/soyisimanalayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="15dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/isimanalayout">
+
+        <TextView
+            android:id="@+id/soyisimtxt"
+            android:textColor="@color/white"
+            android:layout_width="110dp"
+            android:layout_height="wrap_content"
+            android:text="Soyisiminiz:"
+            android:textStyle="bold"
+            android:textSize="18sp" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/soyisimlayout"
+            app:boxBackgroundColor="#B88F45"
+            app:counterTextColor="@color/white"
+            app:boxStrokeColor="@color/white"
+            app:placeholderTextColor="@color/white"
+            android:textColorHint="@color/white"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:counterMaxLength="20"
+            app:boxCornerRadiusBottomStart="15dp"
+            app:boxCornerRadiusTopEnd="15dp"
+            app:counterEnabled="true">
+
+
+            <EditText
+                android:id="@+id/soyisimedit"
+                android:textColor="@color/white"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:hint="Soyisminizi Giriniz"
+                android:inputType="text"
+                android:maxLength="20" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/telanalayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="15dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/soyisimanalayout">
+
+        <TextView
+            android:id="@+id/teltxt"
+            android:layout_width="110dp"
+            android:textColor="@color/white"
+            android:layout_height="wrap_content"
+            android:text="Telefon No:"
+            android:textStyle="bold"
+            android:textSize="18sp" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/tellayout"
+            app:boxBackgroundColor="#B88F45"
+            app:counterTextColor="@color/white"
+            app:boxStrokeColor="@color/white"
+            app:placeholderTextColor="@color/white"
+            android:textColorHint="@color/white"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:counterMaxLength="10"
+            app:boxCornerRadiusBottomStart="15dp"
+            app:boxCornerRadiusTopEnd="15dp"
+            app:counterEnabled="true">
+
+
+            <EditText
+                android:id="@+id/telefonedit"
+                android:textColor="@color/white"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:hint="Telefon Giriniz"
+                android:phoneNumber="true"
+                android:inputType="numberDecimal"
+                android:maxLength="10" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/sifreanalayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="15dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/telanalayout">
+
+        <TextView
+            android:id="@+id/sifretxt"
+            android:layout_width="110dp"
+            android:textColor="@color/white"
+            android:layout_height="wrap_content"
+            android:text="Şifreniz:"
+            android:textStyle="bold"
+            android:textSize="18sp" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/sifrelayout"
+            app:boxBackgroundColor="#B88F45"
+            app:counterTextColor="@color/white"
+            app:boxStrokeColor="@color/white"
+            app:placeholderTextColor="@color/white"
+            android:textColorHint="@color/white"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:boxCornerRadiusBottomStart="15dp"
+            app:boxCornerRadiusTopEnd="15dp"
+            app:counterEnabled="true">
+
+
+            <EditText
+                android:id="@+id/sifreedit"
+                android:layout_width="match_parent"
+                android:textColor="@color/white"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:hint="Şifrenizi Giriniz"
+                android:inputType="text"
+                android:maxLength="20"
+                />
+
+        </com.google.android.material.textfield.TextInputLayout>
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/sifreana2layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="15dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/sifreanalayout">
+
+        <TextView
+            android:id="@+id/sifre2txt"
+            android:textColor="@color/white"
+            android:layout_width="110dp"
+            android:layout_height="wrap_content"
+            android:text="Şifreniz:"
+            android:textStyle="bold"
+            android:textSize="18sp" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/sifre2layout"
+            app:boxBackgroundColor="#B88F45"
+            app:counterTextColor="@color/white"
+            app:boxStrokeColor="@color/white"
+            app:placeholderTextColor="@color/white"
+            android:textColorHint="@color/white"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:boxCornerRadiusBottomStart="15dp"
+            app:boxCornerRadiusTopEnd="15dp"
+            app:counterEnabled="true">
+
+
+            <EditText
+                android:id="@+id/sifre2edit"
+                android:textColor="@color/white"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:hint="Şifrenizi Giriniz"
+                android:inputType="text"
+                android:maxLength="20"
+                />
+
+        </com.google.android.material.textfield.TextInputLayout>
+    </LinearLayout>
+
+    <Spinner
+        android:id="@+id/sehirSpinner"
+        android:textColor="@color/white"
+        android:background="@color/white"
+        android:backgroundTint="@color/white"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="50dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/sifreana2layout" />
+
+    <RadioGroup
+        android:id="@+id/radiogrupid"
+        android:textColor="@color/white"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/sehirSpinner">
+
+        <RadioButton
+            android:id="@+id/erkekbtn"
+            android:textStyle="bold"
+            android:textColor="@color/white"
+            android:layout_marginEnd="30dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Erkek" />
+
+        <RadioButton
+            android:id="@+id/kadinbtn"
+            android:textStyle="bold"
+            android:textColor="@color/white"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Kadın" />
+    </RadioGroup>
+
+    <Button
+        android:id="@+id/btnkayit"
+        android:textColor="@color/white"
+        android:backgroundTint="#B88F45"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="Kayıt Ol"
+        android:onClick="kayitfonk"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/radiogrupid" />
+
+    <ImageView
+        android:id="@+id/geridon"
+        android:layout_width="45dp"
+        android:layout_height="45dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="15dp"
+        android:onClick="geridonfonk"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/geri" />
+</androidx.constraintlayout.widget.ConstraintLayout>

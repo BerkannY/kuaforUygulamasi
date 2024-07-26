@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:title="Anasayfa"
+        android:id="@+id/idAnasayfa"
+        android:icon="@drawable/ic_anasayfa"
+        />
+    <item
+        android:title="Alışveriş"
+        android:id="@+id/idAlisveris"
+        android:icon="@drawable/ic_alisveris"
+        />
+    <item
+        android:title="Sepetim"
+        android:id="@+id/idSepet"
+        android:icon="@drawable/ic_sepet"
+        />
+    <item
+        android:title="Geçmiş"
+        android:id="@+id/idGecmis"
+        android:icon="@drawable/ic_gecmis"
+        />
+    <item
+        android:title="Hesabım"
+        android:id="@+id/idHesap"
+        android:icon="@drawable/ic_profil"
+        />
+</menu>

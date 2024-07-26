@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background"
+    tools:context=".MainActivity">
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="250dp"
+        android:layout_height="200dp"
+        android:layout_marginTop="50dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ico" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/telllayout"
+        app:boxBackgroundColor="#B88F45"
+        app:counterTextColor="@color/white"
+        app:boxStrokeColor="@color/white"
+        app:placeholderTextColor="@color/white"
+        android:textColorHint="@color/white"
+        android:layout_marginEnd="50dp"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="25dp"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:boxCornerRadiusBottomStart="15dp"
+        app:boxCornerRadiusTopEnd="15dp"
+        app:layout_constraintTop_toBottomOf="@+id/imageView2">
+
+        <EditText
+            android:id="@+id/telefonedit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="28dp"
+            android:drawableTint="#FFFFFF"
+            android:ems="10"
+            android:hint="Telefon Numarası (0 olmadan) girin..."
+            android:inputType="numberDecimal"
+            android:maxLength="10"
+            android:shadowColor="#FFFFFF"
+            android:textColor="@color/white"
+            android:textColorHighlight="#F6F6F6"
+            android:textColorHint="#FFFFFF"
+            android:textColorLink="#FFFFFF"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.497"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageView2" />
+    </com.google.android.material.textfield.TextInputLayout>
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/sifreelayout"
+        app:boxBackgroundColor="#B88F45"
+        app:counterTextColor="@color/white"
+        app:boxStrokeColor="@color/white"
+        app:placeholderTextColor="@color/white"
+        android:textColorHint="@color/white"
+        android:layout_marginEnd="50dp"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="25dp"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:boxCornerRadiusBottomStart="15dp"
+        app:boxCornerRadiusTopEnd="15dp"
+        app:layout_constraintTop_toBottomOf="@+id/telllayout">
+    <EditText
+        android:id="@+id/sifre"
+        android:textColor="@color/white"
+        app:boxBackgroundColor="#B88F45"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="29dp"
+        android:ems="10"
+        android:hint="Şifre girin..."
+        android:inputType="text"
+        android:password="true"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <Button
+        android:id="@+id/girisYap"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:onClick="girisfonk"
+        android:text="Giris Yap"
+        android:backgroundTint="#BA8C49"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/switch1" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_marginTop="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/girisYap">
+
+        <TextView
+            android:id="@+id/textView"
+            android:textColor="@color/white"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="12dp"
+            android:textSize="16dp"
+            android:gravity="center"
+            android:text="Hesabını Yoksa " />
+
+        <TextView
+            android:id="@+id/kayitOlButon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="kayitfonk"
+            android:textStyle="bold"
+            android:textSize="16dp"
+            android:text="Kayıt Ol"
+            android:textColor="#FFC107" />
+    </LinearLayout>
+
+    <Switch
+        android:id="@+id/switch1"
+        android:textStyle="bold"
+        android:textColor="@color/white"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:checked="true"
+        android:text="Beni Hatırla"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/sifreelayout" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

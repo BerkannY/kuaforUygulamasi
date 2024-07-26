@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+
+
+    //BottomView Renkleri
+    <color name="secilenrenk">#F44336</color>
+    <color name="secilmeyenrenk">#020202</color>
+</resources>
